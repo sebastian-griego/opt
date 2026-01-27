@@ -17,7 +17,7 @@ Global best known bounds (reference):
 # Best known (local)
 Best value: TBD (no local runs yet)
 Found by: TBD
-Reproduce: TBD (search not implemented yet)
+Reproduce: python experiments/c1b/search.py --m 50 --seed 0 --steps 1000
 Verify: python experiments/c1b/eval.py --candidate best_candidate.json --impl fft
 
 # Evaluator definition snapshot

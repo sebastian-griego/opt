@@ -1,0 +1,22 @@
+# Guardrails for unattended Codex runs.
+
+prefix_rule(
+    pattern = ["rm", "-rf", "/"],
+    decision = "forbidden",
+    justification = "Destructive. Use workspace-scoped deletes only.",
+    match = ["rm -rf /"],
+)
+
+prefix_rule(
+    pattern = ["sudo"],
+    decision = "forbidden",
+    justification = "Avoid privilege escalation in unattended runs.",
+    match = ["sudo rm -rf /"],
+)
+
+prefix_rule(
+    pattern = ["git", "reset", "--hard"],
+    decision = "forbidden",
+    justification = "Destructive. Prefer 'git restore --staged' or manual edits.",
+    match = ["git reset --hard"],
+)

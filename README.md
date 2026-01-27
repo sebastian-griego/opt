@@ -8,6 +8,6 @@ Short iteration (one command):
 
 ```bash
 python -m pytest -q && \
-  python experiments/<target>/search.py --m ... --seed ... --steps ... && \
-  python experiments/<target>/eval.py --candidate best_candidate.json --m ...
+  python experiments/c1b/search.py --m 50 --seed 0 --steps 1000 && \
+  python experiments/c1b/eval.py --candidate best_candidate.json --impl fft
 ```

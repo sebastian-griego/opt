@@ -1,0 +1,9 @@
+# Project-scoped Codex configuration.
+# Keeps unattended runs constrained to the repo workspace.
+
+sandbox_mode = "workspace-write"
+approval_policy = "never"
+
+[sandbox_workspace_write]
+# Network access is disabled in workspace-write mode.
+network_access = false
