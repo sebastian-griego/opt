@@ -2,7 +2,7 @@
 
 Purpose: improve a specific optimization constant by producing candidate constructions and scoring them with a local, reproducible evaluator.
 
-Current target constant: C1b (see STATUS.md for the latest bound and reproduction details).
+Current target constant: C1b (upper bound; better means smaller max overlap). See STATUS.md for definition and the latest bound.
 
 Short iteration (one command):
 
