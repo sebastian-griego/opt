@@ -11,3 +11,4 @@ timestamp,target,direction,m,dx,grid_shift,eval_impl,search_impl,seed,steps,scor
 2026-01-29T05:02:10,C1b,upper,50,0.04,0,fft,hillclimb_kswap,7,200,0.43281473675783916,0.4213986240549787,experiments/c1b/candidates/candidate_ms_20260129T050210_seed7.json,0fbb90e
 2026-01-29T05:02:10,C1b,upper,50,0.04,0,fft,hillclimb_kswap,8,200,0.4404745772855402,0.4213986240549787,experiments/c1b/candidates/candidate_ms_20260129T050210_seed8.json,0fbb90e
 2026-01-29T05:03:18,C1b,upper,50,0.04,0,fft,hillclimb_kswap,6,1000,0.41513606530040825,0.41513606530040825,experiments/c1b/candidates/kswap_m50_seed6_steps1000.json,a68172f
+2026-01-29T05:04:08,C1b,upper,50,0.04,0,fft,hillclimb_kswap,9,1000,0.4348054536411486,0.41513606530040825,experiments/c1b/candidates/kswap_m50_seed9_steps1000.json,92a1f16
