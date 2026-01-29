@@ -2,4 +2,4 @@
 
 Keep items tiny and closed loop:
 
-1. Try 500000 steps for seed=18 with k=7 or try another seed with k=7.
+1. Try 600000 steps for seed=18 with k=7 or try another seed with k=7.
