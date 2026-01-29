@@ -2,4 +2,4 @@
 
 Keep items tiny and closed loop:
 
-1. Try a different seed with 20000 steps (e.g., seed=14) or vary kswap-k.
+1. Increase steps for seed=14 (e.g., 40000) or vary kswap-k.
