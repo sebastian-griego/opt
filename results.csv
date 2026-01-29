@@ -1,2 +1,5 @@
 timestamp,target,direction,m,dx,grid_shift,eval_impl,search_impl,seed,steps,score,best_so_far,candidate_path,git_commit
 2026-01-29T04:43:45,C1b,upper,50,0.04,0,fft,hillclimb_pair,0,200,0.477585079762581,0.477585079762581,experiments/c1b/candidates/candidate_20260129T044345.json,4b8dde9
+2026-01-29T04:58:14,C1b,upper,50,0.04,0,fft,hillclimb_pair,1,200,0.4865813890029203,0.477585079762581,experiments/c1b/candidates/candidate_ms_20260129T045814_seed1.json,a6b2146
+2026-01-29T04:58:14,C1b,upper,50,0.04,0,fft,hillclimb_pair,2,200,0.4692913622042807,0.4692913622042807,experiments/c1b/candidates/candidate_ms_20260129T045814_seed2.json,a6b2146
+2026-01-29T04:58:14,C1b,upper,50,0.04,0,fft,hillclimb_pair,3,200,0.47854972540744295,0.4692913622042807,experiments/c1b/candidates/candidate_ms_20260129T045814_seed3.json,a6b2146
