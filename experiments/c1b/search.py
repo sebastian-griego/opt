@@ -139,6 +139,11 @@ def run_search(args: argparse.Namespace) -> int:
     f = init_candidate(args.m, rng)
     dx = 2.0 / args.m
     current_score, _overlaps, _x = evaluate(f, dx, impl=args.eval_impl)
+    best_f, best_score = load_best_candidate(args.best_candidate, args.eval_impl)
+    if best_f is not None and best_f.size == args.m:
+        if best_score is not None and best_score + args.tol < current_score:
+            f = best_f.copy()
+            current_score = best_score
 
     accepted = 0
     for _step in range(args.steps):
