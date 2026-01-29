@@ -15,9 +15,9 @@ Global best known bounds (reference):
 - 0.379005 <= C1b <= 0.380876 (from optimizationproblems table; see user-provided reference, captured 2026-01-27)
 
 # Best known (local)
-Best value: 0.421398624055 (m=50, fft eval)
-Found by: hillclimb_kswap (steps=200, seed=6)
-Reproduce: python experiments/c1b/search.py --m 50 --seed 6 --steps 200 --operator kswap --snapshot-every 0
+Best value: 0.415136065300 (m=50, fft eval)
+Found by: hillclimb_kswap (steps=1000, seed=6)
+Reproduce: python experiments/c1b/search.py --m 50 --seed 6 --steps 1000 --operator kswap --snapshot-every 0
 Verify: python experiments/c1b/eval.py --candidate best_candidate.json --impl fft
 
 # Evaluator definition snapshot
@@ -26,6 +26,6 @@ Shift grid: integer shifts s in [-m, m], x = s * dx
 Any smoothing: none (piecewise-constant bins)
 
 # Last iteration summary
-- Change: Ran kswap multi-start at m=50 with seeds 6..8 (steps=200) and logged all runs.
-- Result: Best improved to 0.421398624055; results.csv appended and best_candidate.json updated.
-- Next: Increase kswap steps at m=50 (e.g., 1000) for the best seed to see if it improves further.
+- Change: Increased kswap steps at m=50 for seed=6 and logged the run.
+- Result: Best improved to 0.415136065300; results.csv appended and best_candidate.json updated.
+- Next: Try a longer kswap run at m=50 with a new seed (e.g., 9) to see if it improves further.

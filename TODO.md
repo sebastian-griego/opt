@@ -2,4 +2,4 @@
 
 Keep items tiny and closed loop:
 
-1. Increase kswap steps at m=50 (e.g., 1000) for the best seed to see if it improves further.
+1. Try a longer kswap run at m=50 with a new seed (e.g., 9) to see if it improves further.
