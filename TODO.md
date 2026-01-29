@@ -2,4 +2,4 @@
 
 Keep items tiny and closed loop:
 
-1. Increase steps for seed=6 (e.g., 2000) to see if it improves further.
+1. Try 5000 steps for seed=6 or run a new seed with 2000 steps.
