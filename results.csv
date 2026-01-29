@@ -1,1 +1,2 @@
 timestamp,target,direction,m,dx,grid_shift,eval_impl,search_impl,seed,steps,score,best_so_far,candidate_path,git_commit
+2026-01-29T04:43:45,C1b,upper,50,0.04,0,fft,hillclimb_pair,0,200,0.477585079762581,0.477585079762581,experiments/c1b/candidates/candidate_20260129T044345.json,4b8dde9

@@ -9,7 +9,14 @@ from typing import Any, Dict, Optional, Tuple
 
 import numpy as np
 
-from experiments.c1b.eval import DEFAULT_TOL, evaluate, validate_candidate
+try:
+    from experiments.c1b.eval import DEFAULT_TOL, evaluate, validate_candidate
+except ModuleNotFoundError:  # Support running as a script from repo root.
+    import sys
+
+    repo_root = Path(__file__).resolve().parents[2]
+    sys.path.append(str(repo_root))
+    from experiments.c1b.eval import DEFAULT_TOL, evaluate, validate_candidate
 
 
 def _project_mean_half(values: np.ndarray, tol: float = 1e-12) -> np.ndarray:

@@ -1,12 +1,19 @@
+import json
+from fractions import Fraction
+
 import numpy as np
 import pytest
 
 from experiments.c1b.eval import (
     DEFAULT_TOL,
     evaluate,
+    evaluate_candidate,
+    evaluate_exact,
+    overlap_curve_exact,
     overlap_curve_fft,
     overlap_curve_slow,
     validate_candidate,
+    validate_candidate_exact,
 )
 
 
@@ -15,6 +22,15 @@ def _candidate_dict(f):
         "representation": "piecewise_constant",
         "m": len(f),
         "f": list(map(float, f)),
+        "postprocessing": None,
+    }
+
+
+def _candidate_dict_exact(f):
+    return {
+        "representation": "piecewise_constant",
+        "m": len(f),
+        "f": list(f),
         "postprocessing": None,
     }
 
@@ -44,6 +60,22 @@ def test_constant_half_tent():
     assert overlaps[-1] == pytest.approx(0.0, abs=1e-12)
     assert np.allclose(overlaps, expected, atol=1e-12)
     assert np.allclose(overlaps, overlaps[::-1], atol=1e-12)
+
+
+def test_exact_constant_half_tent():
+    m = 12
+    f = [Fraction(1, 2)] * m
+    data = _candidate_dict_exact(f)
+    f_arr, _m, dx = validate_candidate_exact(data, tol=0.0)
+    overlaps = overlap_curve_exact(f_arr, dx)
+
+    expected = [
+        Fraction(1, 2) * (Fraction(1, 1) - Fraction(abs(k), m))
+        for k in range(-m, m + 1)
+    ]
+    assert overlaps == expected
+    score, _, _ = evaluate_exact(f_arr, dx)
+    assert score == Fraction(1, 2)
 
 
 def test_bounds_validation():
@@ -88,3 +120,18 @@ def test_fft_matches_slow():
             slow_score, _, _ = evaluate(f_arr, dx, impl="slow")
             fast_score, _, _ = evaluate(f_arr, dx, impl="fft")
             assert slow_score == pytest.approx(fast_score, abs=1e-10)
+
+
+def test_exact_candidate_matches_float(tmp_path):
+    m = 4
+    f = [0.25, 0.75, 0.25, 0.75]
+    data = _candidate_dict(f)
+    path = tmp_path / "cand.json"
+    with path.open("w", encoding="utf-8") as f_out:
+        json.dump(data, f_out)
+
+    exact_score = evaluate_candidate(path, impl="exact", tol=0.0)
+    f_arr = np.asarray(f, dtype=float)
+    dx = 2.0 / m
+    float_score, _, _ = evaluate(f_arr, dx, impl="slow")
+    assert exact_score == pytest.approx(float_score, abs=1e-12)

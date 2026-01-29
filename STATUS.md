@@ -15,9 +15,9 @@ Global best known bounds (reference):
 - 0.379005 <= C1b <= 0.380876 (from optimizationproblems table; see user-provided reference, captured 2026-01-27)
 
 # Best known (local)
-Best value: TBD (no local runs yet)
-Found by: TBD
-Reproduce: python experiments/c1b/search.py --m 50 --seed 0 --steps 1000
+Best value: 0.477585079763 (m=50, fft eval)
+Found by: hillclimb_pair (steps=200, seed=0)
+Reproduce: python experiments/c1b/search.py --m 50 --seed 0 --steps 200
 Verify: python experiments/c1b/eval.py --candidate best_candidate.json --impl fft
 
 # Evaluator definition snapshot
@@ -26,6 +26,6 @@ Shift grid: integer shifts s in [-m, m], x = s * dx
 Any smoothing: none (piecewise-constant bins)
 
 # Last iteration summary
-- Change: Added slow evaluator and FFT-based evaluator with tests.
-- Result: No runs yet.
-- Next: Implement first short search loop that logs results.csv + best_candidate.json.
+- Change: Added exact-eval pathway (Fractions) + tests; fixed search import for direct script runs.
+- Result: Short search run (m=50, steps=200, seed=0) -> best 0.477585079763; results.csv appended and best_candidate.json updated.
+- Next: Add a multi-start wrapper to run N seeds and record the best score.
