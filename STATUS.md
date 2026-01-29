@@ -26,6 +26,6 @@ Shift grid: integer shifts s in [-m, m], x = s * dx
 Any smoothing: none (piecewise-constant bins)
 
 # Last iteration summary
-- Change: Ran kswap-k=7 for seed=20 at 6,000,000 steps plus a short 20,000-step seed=36 run, and logged both.
+- Change: Ran kswap-k=7 for seed=20 at 6,300,000 steps plus a short 20,000-step seed=37 run, and logged both.
 - Result: Best unchanged at 0.387794755661; results.csv appended.
-- Next: Try 6,300,000 steps for seed=20 with k=7 or try another seed with k=7.
+- Next: Try 6,600,000 steps for seed=20 with k=7 or try another seed with k=7.
