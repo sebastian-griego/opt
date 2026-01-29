@@ -15,9 +15,9 @@ Global best known bounds (reference):
 - 0.379005 <= C1b <= 0.380876 (from optimizationproblems table; see user-provided reference, captured 2026-01-27)
 
 # Best known (local)
-Best value: 0.387794434166 (m=50, fft eval)
-Found by: hillclimb_kswap (steps=6600000, seed=20, kswap-k=7; warm start from best_candidate.json)
-Reproduce: python experiments/c1b/search.py --m 50 --seed 20 --steps 6600000 --operator kswap --kswap-k 7 --snapshot-every 0
+Best value: 0.387791883826 (m=50, fft eval)
+Found by: hillclimb_kswap (steps=6900000, seed=20, kswap-k=7; warm start from best_candidate.json)
+Reproduce: python experiments/c1b/search.py --m 50 --seed 20 --steps 6900000 --operator kswap --kswap-k 7 --snapshot-every 0
 Verify: python experiments/c1b/eval.py --candidate best_candidate.json --impl fft
 
 # Evaluator definition snapshot
@@ -26,6 +26,6 @@ Shift grid: integer shifts s in [-m, m], x = s * dx
 Any smoothing: none (piecewise-constant bins)
 
 # Last iteration summary
-- Change: Ran kswap-k=7 for seed=20 at 6,600,000 steps plus a short 20,000-step seed=38 run, and logged both.
-- Result: Best improved to 0.387794434166; results.csv appended and best_candidate.json updated.
-- Next: Try 6,900,000 steps for seed=20 with k=7 or try another seed with k=7.
+- Change: Ran kswap-k=7 for seed=20 at 6,900,000 steps plus a short 20,000-step seed=39 run, and logged both.
+- Result: Best improved to 0.387791883826; results.csv appended and best_candidate.json updated.
+- Next: Try 7,200,000 steps for seed=20 with k=7 or try another seed with k=7.
