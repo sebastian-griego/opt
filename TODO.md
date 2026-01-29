@@ -2,4 +2,4 @@
 
 Keep items tiny and closed loop:
 
-1. Try kswap-k=5 at the same budget or start a new seed with 20000 steps.
+1. Increase steps for kswap-k=5 (e.g., 40000) or try a new seed with kswap-k=5.
