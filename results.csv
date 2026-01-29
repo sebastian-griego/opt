@@ -3,3 +3,5 @@ timestamp,target,direction,m,dx,grid_shift,eval_impl,search_impl,seed,steps,scor
 2026-01-29T04:58:14,C1b,upper,50,0.04,0,fft,hillclimb_pair,1,200,0.4865813890029203,0.477585079762581,experiments/c1b/candidates/candidate_ms_20260129T045814_seed1.json,a6b2146
 2026-01-29T04:58:14,C1b,upper,50,0.04,0,fft,hillclimb_pair,2,200,0.4692913622042807,0.4692913622042807,experiments/c1b/candidates/candidate_ms_20260129T045814_seed2.json,a6b2146
 2026-01-29T04:58:14,C1b,upper,50,0.04,0,fft,hillclimb_pair,3,200,0.47854972540744295,0.4692913622042807,experiments/c1b/candidates/candidate_ms_20260129T045814_seed3.json,a6b2146
+2026-01-29T05:00:00,C1b,upper,50,0.04,0,fft,hillclimb_pair,4,200,0.4765697983752406,0.4692913622042807,experiments/c1b/candidates/compare_pair_seed4.json,cda0c31
+2026-01-29T05:00:02,C1b,upper,50,0.04,0,fft,hillclimb_kswap,4,200,0.43628137925558663,0.43628137925558663,experiments/c1b/candidates/compare_kswap_seed4.json,cda0c31
