@@ -2,4 +2,4 @@
 
 Keep items tiny and closed loop:
 
-1. Try 40000 steps for seed=6 or run a new seed with 20000 steps.
+1. Run a new seed with 20000 steps (e.g., seed=11) to check for a better basin.
