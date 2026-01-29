@@ -2,4 +2,4 @@
 
 Keep items tiny and closed loop:
 
-1. Run a new seed with 20000 steps (e.g., seed=11) to check for a better basin.
+1. Try a different seed with 20000 steps (e.g., seed=12) or vary kswap-k.

@@ -26,6 +26,6 @@ Shift grid: integer shifts s in [-m, m], x = s * dx
 Any smoothing: none (piecewise-constant bins)
 
 # Last iteration summary
-- Change: Increased kswap steps to 40000 for seed=6 at m=50 and logged the run.
-- Result: No improvement over 0.401732281821; results.csv appended.
-- Next: Run a new seed with 20000 steps (e.g., seed=11) to check for a better basin.
+- Change: Ran kswap with a new seed=11 at m=50 for 20000 steps and logged the run.
+- Result: Seed=11 reached 0.408438169701; overall best remains 0.401732281821.
+- Next: Try a different seed with 20000 steps (e.g., seed=12) or vary kswap-k.
