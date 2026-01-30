@@ -28,4 +28,4 @@ Any smoothing: none (piecewise-constant bins)
 # Last iteration summary
 - Change: Ran kswap-k=7 for seed=1300000000 at 20,000 steps, and logged it.
 - Result: Best unchanged at 0.387791883826 (fft eval); results.csv appended.
-- Next: Try another seed with k=7 (e.g., seed=1600000000).
+- Next: Try another seed with k=7 (e.g., seed=1700000000).
