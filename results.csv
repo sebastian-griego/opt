@@ -326,3 +326,6 @@ timestamp,target,direction,m,dx,grid_shift,eval_impl,search_impl,seed,steps,scor
 2026-01-30T20:50:24,C1b,upper,50,0.04,0,fft,hillclimb_kswap,2026,20000,0.38779188382587687,0.38779188382587687,experiments/c1b/candidates/kswap_m50_seed2026_k7_steps20000.json,3b52ef7
 2026-01-30T20:51:14,C1b,upper,50,0.04,0,fft,hillclimb_kswap,2718,20000,0.38779188382587687,0.38779188382587687,experiments/c1b/candidates/kswap_m50_seed2718_k7_steps20000.json,054e922
 2026-01-30T20:51:56,C1b,upper,50,0.04,0,fft,hillclimb_kswap,4096,20000,0.38779188382587687,0.38779188382587687,experiments/c1b/candidates/kswap_m50_seed4096_k7_steps20000.json,94abb3d
+2026-01-30T20:52:45,C1b,upper,50,0.04,0,fft,hillclimb_kswap,5000,20000,0.38779188382587687,0.38779188382587687,experiments/c1b/candidates/kswap_m50_seed5000_k7_steps20000.json,645c3a3
+2026-01-30T20:29:56,C1b,upper,50,0.04,0,fft,hillclimb_kswap,20,35100000,0.38779188382587687,0.38779188382587687,experiments/c1b/candidates/kswap_m50_seed20_k7_steps35100000.json,5ef8e11
+2026-01-30T20:53:20,C1b,upper,50,0.04,0,fft,hillclimb_kswap,134,20000,0.38779188382587687,0.38779188382587687,experiments/c1b/candidates/kswap_m50_seed134_k7_steps20000.json,645c3a3
