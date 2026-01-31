@@ -2,4 +2,4 @@
 
 Keep items tiny and closed loop:
 
-1. Try another seed with k=7 (e.g., seed=237000000000).
+1. Try another seed with k=7 (e.g., seed=238000000000).
