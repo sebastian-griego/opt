@@ -1090,3 +1090,4 @@ timestamp,target,direction,m,dx,grid_shift,eval_impl,search_impl,seed,steps,scor
 2026-02-01T04:05:29,C1b,upper,50,0.04,0,fft,hillclimb_kswap,356000000000,20000,0.38779188382587687,0.38779188382587687,experiments/c1b/candidates/candidate_20260201T040529.json,69daf08
 2026-02-01T04:06:43,C1b,upper,50,0.04,0,fft,hillclimb_kswap,357000000000,20000,0.38779188382587687,0.38779188382587687,experiments/c1b/candidates/candidate_20260201T040643.json,bcbe2fe
 2026-02-01T04:07:56,C1b,upper,50,0.04,0,fft,hillclimb_kswap,358000000000,20000,0.38779188382587687,0.38779188382587687,experiments/c1b/candidates/candidate_20260201T040756.json,99fb05a
+2026-02-01T04:09:04,C1b,upper,50,0.04,0,fft,hillclimb_kswap,359000000000,20000,0.38779188382587687,0.38779188382587687,experiments/c1b/candidates/candidate_20260201T040904.json,d01a381
