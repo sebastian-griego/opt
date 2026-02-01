@@ -999,3 +999,4 @@ timestamp,target,direction,m,dx,grid_shift,eval_impl,search_impl,seed,steps,scor
 2026-01-31T04:12:43+00:00,C1b,upper,50,0.04,0,fft,hillclimb_kswap,265000000000,20000,0.387791883826,0.387791883826,experiments/c1b/candidates/kswap_m50_seed265000000000_k7_steps20000.json,3ce67fc
 2026-02-01T02:33:20,C1b,upper,50,0.04,0,fft,hillclimb_kswap,266000000000,20000,0.38779188382587687,0.38779188382587687,experiments/c1b/candidates/candidate_20260201T023320.json,c417776
 2026-02-01T02:35:15,C1b,upper,50,0.04,0,fft,hillclimb_kswap,267000000000,20000,0.38779188382587687,0.38779188382587687,experiments/c1b/candidates/candidate_20260201T023515.json,25de34d
+2026-02-01T02:36:01,C1b,upper,50,0.04,0,fft,hillclimb_kswap,268000000000,20000,0.38779188382587687,0.38779188382587687,experiments/c1b/candidates/candidate_20260201T023601.json,3354022
