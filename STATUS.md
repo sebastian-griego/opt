@@ -26,6 +26,6 @@ Shift grid: integer shifts s in [-m, m], x = s * dx
 Any smoothing: none (piecewise-constant bins)
 
 # Last iteration summary
-- Change: Ran `python experiments/c1b/search.py --m 50 --seed 324000000000 --steps 20000 --operator kswap --kswap-k 7 --snapshot-every 0` and logged it.
+- Change: Ran `python experiments/c1b/search.py --m 50 --seed 325000000000 --steps 20000 --operator kswap --kswap-k 7 --snapshot-every 0` and logged it.
 - Result: Best unchanged at 0.387791883826 (fft eval); results.csv appended.
-- Next: Try another seed with k=7 (e.g., seed=325000000000).
+- Next: Try another seed with k=7 (e.g., seed=326000000000).
