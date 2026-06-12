@@ -11,3 +11,9 @@ python -m pytest -q && \
   python experiments/c1b/search.py --m 50 --seed 0 --steps 1000 && \
   python experiments/c1b/eval.py --candidate best_candidate.json --impl fft
 ```
+
+## Validation
+
+CI runs the evaluator test suite with `pytest` on Python 3.11. The search step
+is intentionally manual because it can produce long-running candidate archives
+and updates to `results.csv`.
