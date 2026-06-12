@@ -8,6 +8,7 @@ Short iteration (one command):
 
 ```bash
 python -m pytest -q && \
+  python scripts/verify_best_candidate.py --candidate best_candidate.json --max-score 0.387791883827 && \
   python experiments/c1b/search.py --m 50 --seed 0 --steps 1000 && \
   python experiments/c1b/eval.py --candidate best_candidate.json --impl fft
 ```
@@ -17,3 +18,12 @@ python -m pytest -q && \
 CI runs the evaluator test suite with `pytest` on Python 3.11. The search step
 is intentionally manual because it can produce long-running candidate archives
 and updates to `results.csv`.
+
+The committed best candidate also has an exact rational audit:
+
+```bash
+python scripts/verify_best_candidate.py --candidate best_candidate.json --out docs/c1b_best_candidate_certificate.md --max-score 0.387791883827
+```
+
+The generated certificate records the candidate hash, exact decimal mass error,
+mass tolerance, bounds, maximum overlap, and active shift locations.

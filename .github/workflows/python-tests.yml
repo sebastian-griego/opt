@@ -30,3 +30,6 @@ jobs:
 
       - name: Run tests
         run: python -m pytest -q
+
+      - name: Verify committed best candidate
+        run: python scripts/verify_best_candidate.py --candidate best_candidate.json --max-score 0.387791883827
