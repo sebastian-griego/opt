@@ -27,3 +27,12 @@ python scripts/verify_best_candidate.py --candidate best_candidate.json --out do
 
 The generated certificate records the candidate hash, exact decimal mass error,
 mass tolerance, bounds, maximum overlap, and active shift locations.
+
+Audit the candidate archive and confirm the committed best is still rank 1:
+
+```bash
+python scripts/audit_candidate_archive.py --check --out-md docs/c1b_candidate_archive_audit.md
+```
+
+Add `--strict-results-csv` when the historical search log must have no stale
+candidate-path references.
