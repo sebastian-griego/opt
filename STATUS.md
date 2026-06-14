@@ -18,7 +18,10 @@ Global best known bounds (reference):
 Best value: 0.387791883826 (m=50, fft eval)
 Found by: hillclimb_kswap (steps=6900000, seed=20, kswap-k=7; warm start from best_candidate.json)
 Reproduce: python experiments/c1b/search.py --m 50 --seed 20 --steps 6900000 --operator kswap --kswap-k 7 --snapshot-every 0
-Verify: python experiments/c1b/eval.py --candidate best_candidate.json --impl fft
+Verify: python scripts/verify_best_candidate.py --candidate best_candidate.json --max-score 0.387791883827
+
+The committed decimal candidate is audited exactly, with the mass constraint
+checked against the evaluator tolerance rather than rounded away.
 
 # Evaluator definition snapshot
 Grid: x in [-2, 2] with 2m + 1 points, step dx = 2/m

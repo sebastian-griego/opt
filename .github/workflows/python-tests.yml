@@ -1,0 +1,35 @@
+name: Python tests
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy pytest
+
+      - name: Compile Python sources
+        run: python -m compileall -q experiments tests
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Verify committed best candidate
+        run: python scripts/verify_best_candidate.py --candidate best_candidate.json --max-score 0.387791883827
